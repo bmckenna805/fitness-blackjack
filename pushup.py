@@ -3,7 +3,12 @@
 
 import sys
 import random
+import argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument('cards', metavar='N', type=int, help='number of cards to pull')
+
+args = parser.parse_args()
 
 # function to print your card results
 def print_card( number ):
@@ -41,9 +46,8 @@ def print_card( number ):
   print str( face ) + " of " + suit
   return face_value
 
-# temporary user input for number of cards to pull
-print "Enter the number of cards to pull"
-sample_size = int(raw_input())
+# reassign the argument to a different variable for no real reason
+sample_size = args.cards
 
 # initialization of some variables
 cards = []
