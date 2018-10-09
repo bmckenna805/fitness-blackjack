@@ -46,9 +46,6 @@ def print_card( number ):
   print str( face ) + " of " + suit
   return face_value
 
-# reassign the argument to a different variable for no real reason
-sample_size = args.cards
-
 # initialization of some variables
 cards = []
 i = 1
@@ -61,7 +58,7 @@ while i < 53:
 
 # randomly select cards from list, using function to translate from 1-52 to names
 i = 0
-while i < sample_size:
+while i < args.cards:
   card = random.choice(cards)
   total += int(print_card(card))
   i += 1
