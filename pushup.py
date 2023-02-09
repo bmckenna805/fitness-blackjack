@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 # usage: ./pushup.py 
 
 import sys
@@ -43,7 +43,7 @@ def print_card( number ):
     suit = "clubs"
 
   # temporary print job to show original values
-  print str( face ) + " of " + suit
+  print( f' {str(face)} of {suit}')
   return face_value
 
 # initialization of some variables
@@ -63,4 +63,4 @@ while i < args.cards:
   total += int(print_card(card))
   i += 1
 
-print "Your total is " + str(total)
+print(f'Your total is {str(total)}')
