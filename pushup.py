@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-# usage: ./pushup.py 
+# usage: ./pushup.py
 
 import sys
 import random
@@ -15,7 +15,9 @@ def print_card( number ):
   
   # actual card face value
   face_value = int(number % 13)
-  if face_value < 10:
+  if face_value == 0:
+      face = 'joker'
+  elif 0 < face_value < 10:
      face = face_value
   elif face_value == 10:
      face = "jack"
@@ -41,6 +43,10 @@ def print_card( number ):
     suit = "spades"
   if dumb == 3:
     suit = "clubs"
+  if face == "joker":
+    suit = "joker"
+  else:
+    suit = "hearts"
 
   # temporary print job to show original values
   print( f' {str(face)} of {suit}')
