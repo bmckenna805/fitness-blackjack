@@ -37,13 +37,13 @@ def print_card( number ):
   suit = " "
   if dumb == 0:
     suit = "hearts"
-  if dumb == 1:
+  elif dumb == 1:
     suit = "diamonds"
-  if dumb == 2:
+  elif dumb == 2:
     suit = "spades"
-  if dumb == 3:
+  elif dumb == 3:
     suit = "clubs"
-  if face == "joker":
+  elif face == "joker":
     suit = "joker"
   else:
     suit = "hearts"
